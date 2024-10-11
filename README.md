@@ -1,6 +1,8 @@
 # MessengerPi_Software
+<img src="https://github.com/sbcshop/MessengerPi_Software/blob/main/images/MessengerPi%20banner.png">
 
 Powered by the Raspberry Pi Pico RP2040, MessengerPi combines walkie-talkie and LoRa modules for versatile wireless communication. Ideal for hikers, campers, and makers, MessengerPi ensures reliable communication for adventures, emergencies, and areas with poor mobile coverage. Stay connected wherever your journey takes you with MessengerPi.
+
 This github provides getting started instructions for MessengerPi.
 
 ### Features:
@@ -47,3 +49,63 @@ This github provides getting started instructions for MessengerPi.
 	- Support the license-free ISM => 433MHz, 868MHz, 915MHz band
 	- Support air date rate => 0.3kbps ~ 62.5kbps 
 - Operating Temperature Range: -20°C ~ +70°C 
+
+## Getting Started MessengerPi
+### Pinout
+<img src="https://github.com/sbcshop/MessengerPi_Software/blob/main/images/MessengerPi%20Pinout.png">
+
+<!--
+- **<ins>Walkie-Talkie Module</ins>**: SA818S-CE walkie-talkie module for high data audio communications.
+- **<ins>LoRa Module</ins>**: LoRa module which handle low data message communications.
+- **<ins>Control Switch/Buttons<ins>** : Onboard there are three control switch,
+   - ** PD Slide Switch** : Use to switch ON/OFF Walkie-talkie module power. On **+ve** side Walkie-talkie module is **ON** while **-ve** side turn module **OFF**.
+   - ** Push-To-Talk** : Push switch when pressed walkie-talkie is in audio transmission mode, so talk to send audio. When release it is in reception mode to listen incoming audio from other walkie-talkie, status indicated by LED.
+
+- **<ins>Type C Interface</ins>**: Type C interface for power and programming Pico RP2040 MCU.
+- **<ins>External Power</ins>**: Additional power source option as 2mm JST to connect 3.7V lithium ion battery for portable use. Onboard charging facility available.
+- **<ins>Audio Output</ins>**: Three options to listen incoming audio,
+  - Use 2mm JST connector or 2.54" standard header to connect 2W or 3W speaker. Checkout below for compatible speaker options.
+  - For private listening use 3.5mm Audio Jack. Required 3 Pole TRS Aux pin connector for Compatibility.
+-->
+#### Compatible speakers available Here:
+* [2W 6 Ohm Mono Enclosed Speaker](https://shop.sb-components.co.uk/products/2-watt-6-ohm-mini-portable-speaker-for-small-electronic-projects-2pcs)
+* [3 Watt 8 Ohm Mini Speaker](https://shop.sb-components.co.uk/products/3-watt-8-ohm-mini-speaker-full-range-portable-for-small-electronic-projects)
+  
+
+## Resources
+  * [Schematic]()
+  * [Hardware Files])
+  * [Step File]()
+  * [RP2040 Datasheet]()
+  * [LoRa Module Manual]()
+  * [Walkie-Talkie Module Manual](https://github.com/sbcshop/Walkie_Talkie_Breakout_Software/blob/main/documents/SA818S-U_Datasheet.pdf)
+
+
+## Related Products
+
+  * [GatePi - Pico and LoRa based 4Channel Relay](https://shop.sb-components.co.uk/products/gatepi?_pos=3&_sid=276907aab&_ss=r)
+  
+    ![GatePi](https://shop.sb-components.co.uk/cdn/shop/products/gate-pi-photoi.png?v=1647335212&width=300)
+  
+  * [USB-to-LoRa dongle](https://shop.sb-components.co.uk/products/usb-to-lora-dongle?_pos=1&_sid=276907aab&_ss=r)
+  
+    ![USB-to-LoRa dongle](https://shop.sb-components.co.uk/cdn/shop/products/05_2.png?v=1678712489&width=300)
+  
+  * [Pico LoRa Expansion](https://shop.sb-components.co.uk/products/pico-lora-expansion?_pos=6&_sid=276907aab&_ss=r) 
+  
+    ![Pico LoRa Expansion](https://shop.sb-components.co.uk/cdn/shop/products/loar-2_1.jpg?v=1670922482&width=300)
+
+  * [Lo-Fi : ESP based LoRa for Long Range communication](https://shop.sb-components.co.uk/products/lo-fi?_pos=22&_sid=276907aab&_ss=r) 
+  
+    ![Lo-Fi](https://shop.sb-components.co.uk/cdn/shop/files/SHOPSIZE3.jpg?v=1700211751&width=300)
+    
+
+ 
+## Product License
+
+This is ***open source*** product. Kindly check LICENSE.md file for more information.
+
+Please contact support@sb-components.co.uk for technical support.
+<p align="center">
+  <img width="360" height="100" src="https://cdn.shopify.com/s/files/1/1217/2104/files/Logo_sb_component_3.png?v=1666086771&width=300">
+</p>
