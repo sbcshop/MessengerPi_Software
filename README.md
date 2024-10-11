@@ -50,7 +50,7 @@ This github provides getting started instructions for MessengerPi.
 	- Support air date rate => 0.3kbps ~ 62.5kbps 
 - Operating Temperature Range: -20°C ~ +70°C 
 
-## Getting Started MessengerPi
+## Hardware Overview of MessengerPi
 ### Pinout
 <img src="https://github.com/sbcshop/MessengerPi_Software/blob/main/images/MessengerPi%20Pinout.png">
 
@@ -71,14 +71,15 @@ This github provides getting started instructions for MessengerPi.
 * [2W 6 Ohm Mono Enclosed Speaker](https://shop.sb-components.co.uk/products/2-watt-6-ohm-mini-portable-speaker-for-small-electronic-projects-2pcs)
 * [3 Watt 8 Ohm Mini Speaker](https://shop.sb-components.co.uk/products/3-watt-8-ohm-mini-speaker-full-range-portable-for-small-electronic-projects)
   
+## Getting Started with MessengerPi
 
 ## Resources
-  * [Schematic]()
-  * [Hardware Files])
-  * [Step File]()
-  * [RP2040 Datasheet]()
+  * [Schematic](https://github.com/sbcshop/MessengerPi_Hardware/blob/main/Design%20Data/Messenger%20Pi%20sch.%20PDF.pdf)
+  * [Hardware Files](https://github.com/sbcshop/MessengerPi_Hardware)
+  * [Step File](https://github.com/sbcshop/MessengerPi_Hardware/blob/main/Mechanical%20Data/Messenger%20Pi%20.STEP)
+  * [RP2040 Datasheet](https://datasheets.raspberrypi.com/rp2040/rp2040-datasheet.pdf)
   * [LoRa Module Manual]()
-  * [Walkie-Talkie Module Manual](https://github.com/sbcshop/Walkie_Talkie_Breakout_Software/blob/main/documents/SA818S-U_Datasheet.pdf)
+  * [Walkie-Talkie Module Manual](https://github.com/sbcshop/MessengerPi_Software/blob/main/documents/SA818S-U_Datasheet.pdf)
 
 
 ## Related Products
