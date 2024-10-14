@@ -54,7 +54,6 @@ This github provides getting started instructions for MessengerPi.
 ### Pinout
 <img src="https://github.com/sbcshop/MessengerPi_Software/blob/main/images/MessengerPi%20Pinout.png">
 
-<!--
 - **<ins>Walkie-Talkie Module</ins>**: SA818S-CE walkie-talkie module for high data audio communications.
 - **<ins>LoRa Module</ins>**: LoRa module which handle low data message communications.
 - **<ins>Control Switch/Buttons<ins>** : Onboard there are three control switch,
@@ -66,12 +65,19 @@ This github provides getting started instructions for MessengerPi.
 - **<ins>Audio Output</ins>**: Three options to listen incoming audio,
   - Use 2mm JST connector or 2.54" standard header to connect 2W or 3W speaker. Checkout below for compatible speaker options.
   - For private listening use 3.5mm Audio Jack. Required 3 Pole TRS Aux pin connector for Compatibility.
--->
+    
 #### Compatible speakers available Here:
 * [2W 6 Ohm Mono Enclosed Speaker](https://shop.sb-components.co.uk/products/2-watt-6-ohm-mini-portable-speaker-for-small-electronic-projects-2pcs)
 * [3 Watt 8 Ohm Mini Speaker](https://shop.sb-components.co.uk/products/3-watt-8-ohm-mini-speaker-full-range-portable-for-small-electronic-projects)
   
 ## Getting Started with MessengerPi
+### Interfacing Details
+
+### MessengerPi and IDE Setup
+### Running First Code in MessengerPi
+### Configure onboard LoRa Module
+### Configure Walkie-Talkie Module
+
 
 ## Resources
   * [Schematic](https://github.com/sbcshop/MessengerPi_Hardware/blob/main/Design%20Data/Messenger%20Pi%20sch.%20PDF.pdf)
