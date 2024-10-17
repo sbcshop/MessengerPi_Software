@@ -110,10 +110,10 @@ This github provides getting started instructions for MessengerPi.
 
 ### 1. How to Install Boot Firmware in Pico of MessengerPi 
 
-- Every board will be pre-installed with suitable MicroPython firmware with the inbuilt display driver module, so you can skip this and jump to [step 2]() for trying Demo Codes.
+- Every board will be pre-installed with suitable MicroPython firmware with the inbuilt display driver module, so you can skip this and jump to [step 2](https://github.com/sbcshop/MessengerPi_Software/tree/main#2-running-first-code-in-messengerpi) for trying Demo Codes.
 - In case, if you are required to reinstall **MicroPython firmware**. First, you need to *Press and Hold* the boot button on backside of MessengerPi, and then, without releasing the button, connect it to PC/laptop using Type C cable. Check below image for reference,
   
-  <img src="https://github.com/sbcshop/ArdiPi_Software/blob/main/images/pico_bootmode.gif" width="340" height="228">
+  <img src="" width="340" height="228">
 
 - Now your device is in boot mode, and you will see a new mass storage device named "RPI-RP2" as shown in the below figure.
 
@@ -121,7 +121,7 @@ This github provides getting started instructions for MessengerPi.
 
 - Download the MicroPython firmware file provided in this repo above ["**_messengerPi_firmware.uf2_**"](https://github.com/sbcshop/MessengerPi_Software/blob/main/messengerPi_firmware.uf2). Drag and drop Firmware file onto the RPI-RP2 volume.
 
-  <img src= "https://github.com/sbcshop/2x2_Display_PicoW_Software/blob/main/images/firmware_install.png" width="740" height="463">
+  <img src= "https://github.com/sbcshop/MessengerPi_Software/blob/main/images/messengerPi_firmware_upload.png" width="813" height="501">
   
 ### 2. Running First Code in MessengerPi
 
