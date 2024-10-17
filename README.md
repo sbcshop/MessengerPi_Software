@@ -72,17 +72,148 @@ This github provides getting started instructions for MessengerPi.
   
 ## Getting Started with MessengerPi
 ### Interfacing Details
+- Pico and LoRa Interfacing
+  | Pico | LoRa | Function |
+  |---|---|---|
+  |GP0 (UART0_TX) | Lo_RX | Serial UART communication pin |
+  |GP1 (UART0_RX) | Lo_TX | Serial UART communication pin |
 
-### MessengerPi and IDE Setup
-### Running First Code in MessengerPi
-### Configure onboard LoRa Module
-### Configure Walkie-Talkie Module
+- Pico and Walkie-Talkie Interfacing
+  | Pico | Walkie-Talkie | Function |
+  |---|---|---|
+  |GP4 (UART1_TX) | WT_RX | Serial UART communication pin |
+  |GP5 (UART1_RX) | WT_TX  | Serial UART communication pin |
+  
+- Display interfacing details
+  | Pico | Hardware Pin | Function |
+  |---|---|---|
+  |GP10 | SCLK  | Clock pin of SPI interface for display |
+  |GP11 | DIN   | MOSI (Master OUT Slave IN) data pin of SPI interface|
+  |GP12 | RESET | Display reset pin |
+  |GP13 | CS    | Chip Select pin of SPI interface for display|
+  |GP24 | D/C   | Data/command line of SPI interface for display |
+  |GP26 | BL    | Backlight pin for display |
+
+- SD Card interfacing : SPI0 of Pico is used for interfacing SDcard 
+  | Pico | SDCard | Function |
+  |---|---|---|
+  |GP18 | SCK  | SPI clock pin |
+  |GP19 | MOSI | SPI Master OUT Slave IN interface pin |
+  |GP16 | MISO | SPI Master IN Slave OUT interface pin |
+  |GP17 | CS   | Chip Select pin |
+  
+- QWERTY Keypad 6x6 Matrix
+  | Pico | Function| 
+  |---|---|
+  | GP6, GP9, GP15, GP8, GP7, GP22 | Matrix Row Pins |
+  | GP23, GP2, GP3, GP20, GP21, GP14 | Matrix Column Pins |
+
+### 1. How to Install Boot Firmware in Pico of MessengerPi 
+
+- Every board will be pre-installed with suitable MicroPython firmware with the inbuilt display driver module, so you can skip this and jump to [step 2]() for trying Demo Codes.
+- In case, if you are required to reinstall **MicroPython firmware**. First, you need to *Press and Hold* the boot button on backside of MessengerPi, and then, without releasing the button, connect it to PC/laptop using Type C cable. Check below image for reference,
+  
+  <img src="https://github.com/sbcshop/ArdiPi_Software/blob/main/images/pico_bootmode.gif" width="340" height="228">
+
+- Now your device is in boot mode, and you will see a new mass storage device named "RPI-RP2" as shown in the below figure.
+
+  <img src= "https://github.com/sbcshop/PiCoder-Software/blob/main/images/RPI_folder.jpg" width="720" height="360"/>
+
+- Download the MicroPython firmware file provided in this repo above ["**_messengerPi_firmware.uf2_**"](https://github.com/sbcshop/MessengerPi_Software/blob/main/messengerPi_firmware.uf2). Drag and drop Firmware file onto the RPI-RP2 volume.
+
+  <img src= "https://github.com/sbcshop/2x2_Display_PicoW_Software/blob/main/images/firmware_install.png" width="740" height="463">
+  
+### 2. Running First Code in MessengerPi
+
+## Configure onboard LoRa Module
+ There are four operating modes, which are set by M1 and M0. Use onboard LoRa module slide switch for setting pin Logic 0 or 1. 
+ 
+ <img src = "https://github.com/sbcshop/USB_Type_C_to_LoRa_Dongle_Software/blob/main/images/Mode_selection.jpg" width="502" height="320"/>
+ 
+ |Operating Mode | M1 | M0 |
+ |---|---|---|
+ |Normal Mode | 0 | 0 |
+ |WOR Mode | 0 | 1 |
+ |Configuration Mode | 1 | 0 |
+ |Deep Sleep Mode | 1 | 1 |
+
+<!--
+ For example, 
+* Normal Mode 
+
+  <img src = "https://github.com/sbcshop/USB_Type_C_to_LoRa_Dongle_Software/blob/main/images/normal_mode.png"/>
+
+ * Config Mode
+
+   <img src = "https://github.com/sbcshop/USB_Type_C_to_LoRa_Dongle_Software/blob/main/images/config_mode.png"/>
+
+### LoRa Dongle As Breakout
+UART serial pins of LoRa are breakout in the header and screw terminal form. So, this device can be used as a breakout to connect with any microcontroller or MCU. 
+
+<img src = "https://github.com/sbcshop/USB_Type_C_to_LoRa_Dongle_Software/blob/main/images/LoRa_uart_pins.png" width="445" height="262"/>
+
+How to interface LoRa with Microcontroller
+ |Microcontroller | LoRa Device |
+ |---|---|
+ |5V | 5V |
+ |TX | RX |
+ |RX | TX |
+ |GND | GND |
+
+
+### Lora GUI For Configuration (run with the help of GUI)
+
+ Follow the steps to configure the Lora module:-
+
+ #### Step 1: Set up Lora in configuration mode, short M0, and open M1 as shown in the figure. 
+ 
+  <img src= "https://github.com/sbcshop/USB_Type_C_to_LoRa_Dongle_Software/blob/main/images/config_mode.png" />
+ 
+#### Step 2: Connect LoRa dongle to PC/laptop USB. Download and open [lora GUI application](https://github.com/sbcshop/USB_Type_C_to_LoRa_Dongle_Software/tree/main/GUI%20For%20Window) for Windows available in GitHub here
+ <img src= "https://github.com/sbcshop/Lora-HAT-for-Raspberry-Pi/blob/main/images/img_1.png" />
+ 
+#### Step 4: Connect the LoRa dongle to the system and Open Device Manager to know the correct COM port
+  <img src= "https://github.com/sbcshop/Lora-HAT-for-Raspberry-Pi/blob/main/images/img_7.png" />
+ 
+#### Step 5: Write the proper COM Port in the GUI and provide the baud rate, then press the connect button
+  <img src= "https://github.com/sbcshop/Lora-HAT-for-Raspberry-Pi/blob/main/images/img_8.png" />
+  <img src= "https://github.com/sbcshop/Lora-HAT-for-Raspberry-Pi/blob/main/images/img_9.png" />
+
+#### Step 6: Press the red button to see the device configuration that Lora already has
+  <img src= "https://github.com/sbcshop/Lora-HAT-for-Raspberry-Pi/blob/main/images/img__10.png" />
+ 
+#### Step 7: Write the values which you need to configure, for eg: I configure channel and baud rate, after that press the write button
+  <img src= "https://github.com/sbcshop/Lora-HAT-for-Raspberry-Pi/blob/main/images/img_13.png" />
+
+ How to Set Corresponding Frequency:
+ 
+    -> For changing frequency using Software for 868MHz & 915MHz LoRa module:
+
+    Frequency = 850.125MHz + CH*1MHz
+    
+    0-83 total of 84 Channel available
+    
+    So, when 5 selected Frequency = 850.125MHz + 5*1MHz Frequency = 855.125MHz
+    
+    -> For Changing Frequency using Software for 433MHz LoRa Module: Frequency = 410.125MHz + CH*1MHz
+    
+    0-83 total of 84 Channel available
+    
+    So, when 5 selected Frequency = 410.125MHz + 5*1MHz Frequency = 415.125MHz
+    
+#### Step 8: Restart the GUI, set baudrate and port, then connect and press the read button 
+  <img src= "https://github.com/sbcshop/Lora-HAT-for-Raspberry-Pi/blob/main/images/img_14.png" />
+  <img src= "https://github.com/sbcshop/Lora-HAT-for-Raspberry-Pi/blob/main/images/img_15.png" />
+-->
+
+## Configure Walkie-Talkie Module
 
 
 ## Resources
   * [Schematic](https://github.com/sbcshop/MessengerPi_Hardware/blob/main/Design%20Data/Messenger%20Pi%20sch.%20PDF.pdf)
   * [Hardware Files](https://github.com/sbcshop/MessengerPi_Hardware)
   * [Step File](https://github.com/sbcshop/MessengerPi_Hardware/blob/main/Mechanical%20Data/Messenger%20Pi%20.STEP)
+  * [MicroPython getting started for RPi Pico/Pico W](https://docs.micropython.org/en/latest/rp2/quickref.html)
   * [RP2040 Datasheet](https://datasheets.raspberrypi.com/rp2040/rp2040-datasheet.pdf)
   * [LoRa Module Manual]()
   * [Walkie-Talkie Module Manual](https://github.com/sbcshop/MessengerPi_Software/blob/main/documents/SA818S-U_Datasheet.pdf)
