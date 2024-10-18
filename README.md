@@ -139,16 +139,12 @@ This github provides getting started instructions for MessengerPi.
    <img src= "https://github.com/sbcshop/MessengerPi_Software/blob/main/images/run_script.png" width="958" height="508"/>
    <img src= "https://github.com/sbcshop/MessengerPi_Software/blob/main/images/save_main.png" width="958" height="508"/>
    
-<!--
 #### Some Example Codes
-   Try reference demo codes to test onboard components of MusicPi, make sure to move [**Lib files**](https://github.com/sbcshop/MusicPi_Software/tree/main/Examples/lib) into Pico before trying example codes. 
-   - [Display Demo](https://github.com/sbcshop/MusicPi_Software/blob/main/Examples/Demo_Display.py) : code to test display
-   - [RGB LED Demo](https://github.com/sbcshop/MusicPi_Software/blob/main/Examples/Demo_RGBLED.py) : code to blink or experiment with onboard RGB LEDs.
-   - [Demo Audio I2S](https://github.com/sbcshop/MusicPi_Software/blob/main/Examples/Demo_Audio_I2S.py) : to play music using Pico/Pico W
-   - [Play Songs](https://github.com/sbcshop/MusicPi_Software/blob/main/Examples/Demo_PlaySongs.py): store and play songs from SDcard with MusicPi, follow steps to create songs [below](https://github.com/sbcshop/MusicPi_Software/blob/main/README.md#build-songs-for-musicpi)
+   Try reference demo codes to test onboard components of MessengerPi, make sure to move [**Lib files**](https://github.com/sbcshop/MessengerPi_Software/tree/main/examples/lib) into Pico before trying example codes. 
+   - [Display Demo](https://github.com/sbcshop/MessengerPi_Software/blob/main/examples/Demo_Display.py) : code to test display
+   - [Messenging Demo over LoRa](https://github.com/sbcshop/MessengerPi_Software/blob/main/examples/Demo_Keyboard_LoRaModule.py) : code to test message feature using LoRa and keyboard.
    
    Using this sample code as a guide, you can modify, build, and share codes!!
--->
 
 ## Configure onboard LoRa Module
  There are four operating modes, which are set by M1 and M0. Use onboard LoRa module slide switch for setting pin Logic 0 or 1. 
