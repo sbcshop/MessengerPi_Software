@@ -150,29 +150,21 @@ This github provides getting started instructions for MessengerPi.
  |Configuration Mode | 1 | 0 |
  |Deep Sleep Mode | 1 | 1 |
 
-<!--
+
  For example, 
-* Normal Mode 
+* **Normal Mode:** M1 = 0 & M0 = 0, so LoRa will be used with Pico of messengerPi for communication with other compatible LoRa device.
 
-  <img src = "https://github.com/sbcshop/USB_Type_C_to_LoRa_Dongle_Software/blob/main/images/normal_mode.png"/>
+* **Config Mode:**
+  - M1= 1 & M0 = 0, with this LoRa module is ready for configuration so you can change buadrate, operating frequency channel, etc.
+  - For this remove jumper selection and interface LoRa module with USB-TTL converter.
 
- * Config Mode
+    <img src = "https://github.com/sbcshop/MessengerPi_Software/blob/main/images/usb_ttl_lora_config.png" width="429" height="223" />
 
-   <img src = "https://github.com/sbcshop/USB_Type_C_to_LoRa_Dongle_Software/blob/main/images/config_mode.png"/>
+  - To perform configuration you can download [GUI application](https://github.com/sbcshop/USB_Type_C_to_LoRa_Dongle_Software/tree/main/GUI%20For%20Window) and follow steps mentioned on link [here](https://github.com/sbcshop/USB_Type_C_to_LoRa_Dongle_Software#lora-gui-for-configuration-run-with-the-help-of-gui).
 
-### LoRa Dongle As Breakout
-UART serial pins of LoRa are breakout in the header and screw terminal form. So, this device can be used as a breakout to connect with any microcontroller or MCU. 
+   
 
-<img src = "https://github.com/sbcshop/USB_Type_C_to_LoRa_Dongle_Software/blob/main/images/LoRa_uart_pins.png" width="445" height="262"/>
-
-How to interface LoRa with Microcontroller
- |Microcontroller | LoRa Device |
- |---|---|
- |5V | 5V |
- |TX | RX |
- |RX | TX |
- |GND | GND |
-
+<!--
 
 ### Lora GUI For Configuration (run with the help of GUI)
 
