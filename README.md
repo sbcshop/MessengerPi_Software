@@ -124,7 +124,20 @@ This github provides getting started instructions for MessengerPi.
   <img src= "https://github.com/sbcshop/MessengerPi_Software/blob/main/images/messengerPi_firmware_upload.png" width="813" height="501">
   
 ### 2. Running First Code in MessengerPi
+- For running application script we will use Thonny IDE, download from [here](https://thonny.org/) 
 
+- Start Thonny IDE application, at bottom right corner, choose device with suitable com port
+   <img src= "https://github.com/sbcshop/MessengerPi_Software/blob/main/images/comport_select.png" width="958" height="508"/>
+
+- Download complete github which contains lib folder and examples. Upload [**lib**](https://github.com/sbcshop/MusicPi_Software/tree/main/Examples/lib) folder to Pico of MessengerPi
+
+   <img src= "https://github.com/sbcshop/MessengerPi_Software/blob/main/images/upload_lib.png" width="958" height="508" />
+
+- Now you can try running any example script code from github [here](https://github.com/sbcshop/MessengerPi_Software/tree/main/examples) or write your own codes to experiment. With script open in Thonny IDE and device connected, just click of green play button OR You can save file as _**main.py**_ into Pico for standalone execution without thonny.
+   
+   <img src= "https://github.com/sbcshop/MessengerPi_Software/blob/main/images/run_script.png" width="958" height="508"/>
+   <img src= "https://github.com/sbcshop/MessengerPi_Software/blob/main/images/save_main.png" width="958" height="508"/>
+   
 ## Configure onboard LoRa Module
  There are four operating modes, which are set by M1 and M0. Use onboard LoRa module slide switch for setting pin Logic 0 or 1. 
  
