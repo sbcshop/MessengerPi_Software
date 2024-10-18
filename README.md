@@ -130,7 +130,7 @@ This github provides getting started instructions for MessengerPi.
 - Start Thonny IDE application, at bottom right corner, choose device with suitable com port
    <img src= "https://github.com/sbcshop/MessengerPi_Software/blob/main/images/comport_select.png" width="958" height="508"/>
 
-- Download complete github which contains lib folder and examples. Upload [**lib**](https://github.com/sbcshop/MusicPi_Software/tree/main/Examples/lib) folder to Pico of MessengerPi
+- Download complete github which contains lib folder and examples. Upload [**lib**](https://github.com/sbcshop/MessengerPi_Software/tree/main/examples/lib) folder to Pico of MessengerPi
 
    <img src= "https://github.com/sbcshop/MessengerPi_Software/blob/main/images/upload_lib.png" width="958" height="508" />
 
@@ -179,7 +179,7 @@ This github provides getting started instructions for MessengerPi.
 
   <img src = "https://github.com/sbcshop/MessengerPi_Software/blob/main/images/walkie-talkie_selection.png" width="490" height="284" />
   
-- Use code script for setup: [Walkie-Talkie Setting Example]()
+- Use code script for setup: [Walkie-Talkie Setting Example](https://github.com/sbcshop/MessengerPi_Software/blob/main/examples/Demo_Walkie_Talkie_module_config.py)
 - Adjust the commands as needed based on your testing requirements and the specific frequencies you want to use. Once you set frequency no need to run again this code for using Walkie-Talkie.
 - During run time you will have to control GP28 pin of Pico for setting Walkie-Talkie power 0.5W/1W. By default if pin not used then wattage is 1.
   ```
