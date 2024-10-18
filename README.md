@@ -113,7 +113,7 @@ This github provides getting started instructions for MessengerPi.
 - Every board will be pre-installed with suitable MicroPython firmware with the inbuilt display driver module, so you can skip this and jump to [step 2](https://github.com/sbcshop/MessengerPi_Software/tree/main#2-running-first-code-in-messengerpi) for trying Demo Codes.
 - In case, if you are required to reinstall **MicroPython firmware**. First, you need to *Press and Hold* the boot button on backside of MessengerPi, and then, without releasing the button, connect it to PC/laptop using Type C cable. Check below image for reference,
   
-  <img src="" width="340" height="228">
+  <img src="https://github.com/sbcshop/MessengerPi_Software/blob/main/images/boot_btn.jpg" width="409" height="187">
 
 - Now your device is in boot mode, and you will see a new mass storage device named "RPI-RP2" as shown in the below figure.
 
@@ -128,7 +128,7 @@ This github provides getting started instructions for MessengerPi.
 ## Configure onboard LoRa Module
  There are four operating modes, which are set by M1 and M0. Use onboard LoRa module slide switch for setting pin Logic 0 or 1. 
  
- <img src = "https://github.com/sbcshop/USB_Type_C_to_LoRa_Dongle_Software/blob/main/images/Mode_selection.jpg" width="502" height="320"/>
+ <img src = "https://github.com/sbcshop/MessengerPi_Software/blob/main/images/LoRa_Mode_selection.jpg" width="169" height="187"/>
  
  |Operating Mode | M1 | M0 |
  |---|---|---|
