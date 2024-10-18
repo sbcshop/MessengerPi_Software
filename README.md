@@ -83,6 +83,7 @@ This github provides getting started instructions for MessengerPi.
   |---|---|---|
   |GP4 (UART1_TX) | WT_RX | Serial UART communication pin |
   |GP5 (UART1_RX) | WT_TX  | Serial UART communication pin |
+  |GP28 | H/L | Walkie-Talkie Power pin, for 0.5W/1W selection |
   
 - Display interfacing details
   | Pico | Hardware Pin | Function |
@@ -138,6 +139,17 @@ This github provides getting started instructions for MessengerPi.
    <img src= "https://github.com/sbcshop/MessengerPi_Software/blob/main/images/run_script.png" width="958" height="508"/>
    <img src= "https://github.com/sbcshop/MessengerPi_Software/blob/main/images/save_main.png" width="958" height="508"/>
    
+<!--
+#### Some Example Codes
+   Try reference demo codes to test onboard components of MusicPi, make sure to move [**Lib files**](https://github.com/sbcshop/MusicPi_Software/tree/main/Examples/lib) into Pico before trying example codes. 
+   - [Display Demo](https://github.com/sbcshop/MusicPi_Software/blob/main/Examples/Demo_Display.py) : code to test display
+   - [RGB LED Demo](https://github.com/sbcshop/MusicPi_Software/blob/main/Examples/Demo_RGBLED.py) : code to blink or experiment with onboard RGB LEDs.
+   - [Demo Audio I2S](https://github.com/sbcshop/MusicPi_Software/blob/main/Examples/Demo_Audio_I2S.py) : to play music using Pico/Pico W
+   - [Play Songs](https://github.com/sbcshop/MusicPi_Software/blob/main/Examples/Demo_PlaySongs.py): store and play songs from SDcard with MusicPi, follow steps to create songs [below](https://github.com/sbcshop/MusicPi_Software/blob/main/README.md#build-songs-for-musicpi)
+   
+   Using this sample code as a guide, you can modify, build, and share codes!!
+-->
+
 ## Configure onboard LoRa Module
  There are four operating modes, which are set by M1 and M0. Use onboard LoRa module slide switch for setting pin Logic 0 or 1. 
  
@@ -162,58 +174,20 @@ This github provides getting started instructions for MessengerPi.
 
   - To perform configuration you can download [GUI application](https://github.com/sbcshop/USB_Type_C_to_LoRa_Dongle_Software/tree/main/GUI%20For%20Window) and follow steps mentioned on link [here](https://github.com/sbcshop/USB_Type_C_to_LoRa_Dongle_Software#lora-gui-for-configuration-run-with-the-help-of-gui).
 
-   
-
-<!--
-
-### Lora GUI For Configuration (run with the help of GUI)
-
- Follow the steps to configure the Lora module:-
-
- #### Step 1: Set up Lora in configuration mode, short M0, and open M1 as shown in the figure. 
- 
-  <img src= "https://github.com/sbcshop/USB_Type_C_to_LoRa_Dongle_Software/blob/main/images/config_mode.png" />
- 
-#### Step 2: Connect LoRa dongle to PC/laptop USB. Download and open [lora GUI application](https://github.com/sbcshop/USB_Type_C_to_LoRa_Dongle_Software/tree/main/GUI%20For%20Window) for Windows available in GitHub here
- <img src= "https://github.com/sbcshop/Lora-HAT-for-Raspberry-Pi/blob/main/images/img_1.png" />
- 
-#### Step 4: Connect the LoRa dongle to the system and Open Device Manager to know the correct COM port
-  <img src= "https://github.com/sbcshop/Lora-HAT-for-Raspberry-Pi/blob/main/images/img_7.png" />
- 
-#### Step 5: Write the proper COM Port in the GUI and provide the baud rate, then press the connect button
-  <img src= "https://github.com/sbcshop/Lora-HAT-for-Raspberry-Pi/blob/main/images/img_8.png" />
-  <img src= "https://github.com/sbcshop/Lora-HAT-for-Raspberry-Pi/blob/main/images/img_9.png" />
-
-#### Step 6: Press the red button to see the device configuration that Lora already has
-  <img src= "https://github.com/sbcshop/Lora-HAT-for-Raspberry-Pi/blob/main/images/img__10.png" />
- 
-#### Step 7: Write the values which you need to configure, for eg: I configure channel and baud rate, after that press the write button
-  <img src= "https://github.com/sbcshop/Lora-HAT-for-Raspberry-Pi/blob/main/images/img_13.png" />
-
- How to Set Corresponding Frequency:
- 
-    -> For changing frequency using Software for 868MHz & 915MHz LoRa module:
-
-    Frequency = 850.125MHz + CH*1MHz
-    
-    0-83 total of 84 Channel available
-    
-    So, when 5 selected Frequency = 850.125MHz + 5*1MHz Frequency = 855.125MHz
-    
-    -> For Changing Frequency using Software for 433MHz LoRa Module: Frequency = 410.125MHz + CH*1MHz
-    
-    0-83 total of 84 Channel available
-    
-    So, when 5 selected Frequency = 410.125MHz + 5*1MHz Frequency = 415.125MHz
-    
-#### Step 8: Restart the GUI, set baudrate and port, then connect and press the read button 
-  <img src= "https://github.com/sbcshop/Lora-HAT-for-Raspberry-Pi/blob/main/images/img_14.png" />
-  <img src= "https://github.com/sbcshop/Lora-HAT-for-Raspberry-Pi/blob/main/images/img_15.png" />
--->
-
 ## Configure Walkie-Talkie Module
+- Walkie-Talkie module can be configure using code with pico itself, Make sure Walkie-Talkie side jumper selection is placed to maintain UART communication between Pico RP2040 and SA818S walkie-talkie module,
 
+  <img src = "https://github.com/sbcshop/MessengerPi_Software/blob/main/images/walkie-talkie_selection.png" width="490" height="284" />
+  
+- Use code script for setup: [Walkie-Talkie Setting Example]()
+- Adjust the commands as needed based on your testing requirements and the specific frequencies you want to use. Once you set frequency no need to run again this code for using Walkie-Talkie.
+- During run time you will have to control GP28 pin of Pico for setting Walkie-Talkie power 0.5W/1W. By default if pin not used then wattage is 1.
+  ```
+  PWR_Sel = Pin(28, Pin.OUT)   # GP28 to control H/L pin of Walkie-Talkie for 0.5W/1W setting
+  PWR_Sel.value(1)             # Logic High makes H/L pin LOW => 0.5Wattage SET, leave for 1W
+  ``` 
 
+  
 ## Resources
   * [Schematic](https://github.com/sbcshop/MessengerPi_Hardware/blob/main/Design%20Data/Messenger%20Pi%20sch.%20PDF.pdf)
   * [Hardware Files](https://github.com/sbcshop/MessengerPi_Hardware)
