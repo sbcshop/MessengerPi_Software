@@ -142,8 +142,8 @@ This github provides getting started instructions for MessengerPi.
 #### Some Example Codes
    Try reference demo codes to test onboard components of MessengerPi, make sure to move [**Lib files**](https://github.com/sbcshop/MessengerPi_Software/tree/main/examples/lib) into Pico before trying example codes. 
    - [Display Demo](https://github.com/sbcshop/MessengerPi_Software/blob/main/examples/Demo_Display.py) : code to test display
-   - [Messenging Demo over LoRa](https://github.com/sbcshop/MessengerPi_Software/blob/main/examples/Demo_Keyboard_LoRaModule.py) : code to test message feature using LoRa and keyboard.
-   
+   - [Keypad Demo](https://github.com/sbcshop/MessengerPi_Software/blob/main/examples/Demo_Keyboard.py) : code to test onboard qwerty keyboard
+   - [Messaging Demo over LoRa](https://github.com/sbcshop/MessengerPi_Software/blob/main/examples/Demo_Keyboard_LoRaModule.py) : code to test message feature using LoRa and keyboard.
    Using this sample code as a guide, you can modify, build, and share codes!!
 
 ## Configure onboard LoRa Module
