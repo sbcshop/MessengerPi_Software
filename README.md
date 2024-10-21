@@ -165,6 +165,13 @@ This github provides getting started instructions for MessengerPi.
 * **Config Mode:**
   - M1= 1 & M0 = 0, with this LoRa module is ready for configuration so you can change buadrate, operating frequency channel, etc.
   - For this remove jumper selection and interface LoRa module with USB-TTL converter.
+    USB-TTL and LoRa Interfacing
+    | USB-TTL | LoRa | Function |
+    |---|---|---|
+    | VCC | 5V   | Supply Positive |
+    | TX  | Lo_RX | Serial UART communication pin |
+    | RX  | Lo_TX | Serial UART communication pin |
+    | GND | GND  | Supply Ground |
 
     <img src = "https://github.com/sbcshop/MessengerPi_Software/blob/main/images/usb_ttl_lora_config.png" width="429" height="223" />
 
@@ -176,13 +183,34 @@ This github provides getting started instructions for MessengerPi.
   <img src = "https://github.com/sbcshop/MessengerPi_Software/blob/main/images/walkie-talkie_selection.png" width="490" height="284" />
   
 - Use code script for setup: [Walkie-Talkie Setting Example](https://github.com/sbcshop/MessengerPi_Software/blob/main/examples/Demo_Walkie_Talkie_module_config.py)
+  ```
+  #code snippets
+  # Example commands
+  send_command('RSSI?')
+
+  # Set frequency group (example frequencies for UK and US)
+  send_command('AT+DMOSETGROUP=0,446.0812,446.0812,0000,1,0000')  # UK frequency
+  # send_command('AT+DMOSETGROUP=0,467.7125,467.7125,0000,1,0000')  # US frequency
+  ```
 - Adjust the commands as needed based on your testing requirements and the specific frequencies you want to use. Once you set frequency no need to run again this code for using Walkie-Talkie.
 - During run time you will have to control GP28 pin of Pico for setting Walkie-Talkie power 0.5W/1W. By default if pin not used then wattage is 1.
   ```
+  #code snippets
   PWR_Sel = Pin(28, Pin.OUT)   # GP28 to control H/L pin of Walkie-Talkie for 0.5W/1W setting
   PWR_Sel.value(1)             # Logic High makes H/L pin LOW => 0.5Wattage SET, leave for 1W
   ``` 
-
+### Using USB-TTL converter and XCTU serial Terminal
+- Even you can configure walkie-talkie with any USB-TTL device externally
+- For this follow below connection with jumper removed to disconnect walkie-talkie with pico and make connection with TTL device,
+  | USB-TTL | Walkie-Takie | Function |
+  |---|---|---|
+  | VCC | 5V   | Supply Positive |
+  | TX  | WT_RX | Serial UART communication pin |
+  | RX  | WT_TX | Serial UART communication pin |
+  | GND | GND  | Supply Ground |
+  
+  <img src = "https://github.com/sbcshop/MessengerPi_Software/blob/main/images/USBTTL_Walkie-talkie.png" width="477" height="289" />
+- Once connection all set, then you can follow complete steps mentioned on link [here](https://github.com/sbcshop/Walkie_Talkie_Breakout_Software#configuration-and-setting-with-uart-via-xctuterminal-software).
   
 ## Resources
   * [Schematic](https://github.com/sbcshop/MessengerPi_Hardware/blob/main/Design%20Data/Messenger%20Pi%20sch.%20PDF.pdf)
@@ -190,7 +218,7 @@ This github provides getting started instructions for MessengerPi.
   * [Step File](https://github.com/sbcshop/MessengerPi_Hardware/blob/main/Mechanical%20Data/Messenger%20Pi%20.STEP)
   * [MicroPython getting started for RPi Pico/Pico W](https://docs.micropython.org/en/latest/rp2/quickref.html)
   * [RP2040 Datasheet](https://datasheets.raspberrypi.com/rp2040/rp2040-datasheet.pdf)
-  * [LoRa Module Manual]()
+  * [LoRa Module Manual](https://github.com/sbcshop/Lo-Fi_Software/blob/main/documents/LoRa%20Module%20Working%20Modes.pdf)
   * [Walkie-Talkie Module Manual](https://github.com/sbcshop/MessengerPi_Software/blob/main/documents/SA818S-U_Datasheet.pdf)
 
 
