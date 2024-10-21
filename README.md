@@ -57,8 +57,8 @@ This github provides getting started instructions for MessengerPi.
 - **<ins>Walkie-Talkie Module</ins>**: SA818S-CE walkie-talkie module for high data audio communications.
 - **<ins>LoRa Module</ins>**: LoRa module which handle low data message communications.
 - **<ins>Control Switch/Buttons<ins>** : Onboard there are three control switch,
-   - ** PD Slide Switch** : Use to switch ON/OFF Walkie-talkie module power. On **+ve** side Walkie-talkie module is **ON** while **-ve** side turn module **OFF**.
-   - ** Push-To-Talk** : Push switch when pressed walkie-talkie is in audio transmission mode, so talk to send audio. When release it is in reception mode to listen incoming audio from other walkie-talkie, status indicated by LED.
+   - **PD Slide Switch** : Use to switch ON/OFF Walkie-talkie module power. On **+ve** side Walkie-talkie module is **ON** while **-ve** side turn module **OFF**.
+   - **Push-To-Talk** : Push switch when pressed walkie-talkie is in audio transmission mode, so talk to send audio. When release it is in reception mode to listen incoming audio from other walkie-talkie, status indicated by LED.
 
 - **<ins>Type C Interface</ins>**: Type C interface for power and programming Pico RP2040 MCU.
 - **<ins>External Power</ins>**: Additional power source option as 2mm JST to connect 3.7V lithium ion battery for portable use. Onboard charging facility available.
